@@ -1,0 +1,18 @@
+<h1>Feedback Form Example</h1>
+<%= form_for @feedback, :url => '/feedback' do |f| %>
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+  <div class='field'>
+    <%= captcha_block %>
+  </div>
+  <div class='field'>
+    <%= label_tag 'Finished?' %>
+    <%= f.submit %>
+  </div>
+<% end %>
