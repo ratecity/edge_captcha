@@ -1,12 +1,21 @@
 require 'spec_helper'
 module EdgeCaptcha
   describe CaptchaHelper do
-    pending '.captcha_image(options={})' do
-      helper.captcha_image.should == true
+    it'.captcha_image(options={})' do
+      assert helper.captcha_image
     end
-    pending '.captcha_input_text'
-    pending '.captcha_hidden_text'
-    pending '.captcha_block'
+
+    it '.captcha_input_text' do
+      assert helper.captcha_block
+    end
+
+    it '.captcha_hidden_text' do
+      assert helper.captcha_hidden_text
+    end
+
+    it '.captcha_block' do
+      assert helper.captcha_block
+    end
   end
 end
 
